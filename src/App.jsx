@@ -1,16 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import Header from "./comonents/headers/Header";
+import WeatherBoard from "./comonents/weather/WeatherBoard";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-     <h1 className='text-3xl text-center text-red-700'>Wellcome to vite with TailwindCSS  and React</h1>
-    </>
-  )
+    <div className="grid place-items-center h-screen">
+      <Header />
+      <main>
+        <section>
+          <WeatherBoard />
+        </section>
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
